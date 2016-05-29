@@ -7,10 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.BeforeTransaction;
 
 import java.io.*;
 
@@ -36,7 +34,7 @@ public class AdapterTest {
         oout.flush();
 
 		classAdapter = new ObjectIterator(new FileInputStream("test.txt"));
-		objectAdapter = new WrappedObjectIterator(classAdapter);
+		objectAdapter = new WrappedObjectIterator(new ObjectInputStream( new FileInputStream("test.txt")));
 	}
 
 	@Test
@@ -49,7 +47,7 @@ public class AdapterTest {
     @Test
     public void objectAdapterTest() {
         while(objectAdapter.hasNext()) {
-            log.info("class adapter {}", objectAdapter.next());
+            log.info("object adapter {}", objectAdapter.next());
         }
     }
 
