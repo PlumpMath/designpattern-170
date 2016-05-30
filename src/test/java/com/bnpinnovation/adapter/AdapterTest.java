@@ -1,6 +1,6 @@
 package com.bnpinnovation.adapter;
 
-import com.bnpinnovation.DemoApplication;
+import com.bnpinnovation.DesignPatternApplication;
 import com.bnpinnovation.adapter.classadapter.ObjectIterator;
 import com.bnpinnovation.adapter.objectadapter.WrappedObjectIterator;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.io.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = DemoApplication.class)
+@SpringApplicationConfiguration(classes = DesignPatternApplication.class)
 @Slf4j
 public class AdapterTest {
 	private ObjectIterator classAdapter;
