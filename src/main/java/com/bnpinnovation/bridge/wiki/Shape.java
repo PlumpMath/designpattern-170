@@ -9,10 +9,12 @@ import javax.annotation.Resource;
 /**
  * Created by sajacaros on 16. 5. 30.
  */
+// abstraction
 public interface Shape {
     void draw();
     void resizeByPercentage(double pot);
 
+    // redefined abstraction
     @Slf4j
     class CircleShape implements Shape {
         private DrawingAPI drawingAPI;

@@ -8,6 +8,7 @@ import java.sql.Statement;
 /**
  * Created by sajacaros on 16. 5. 30.
  */
+// abstraction
 public class SmartConnection {
     String username, password;
     Connection connection;

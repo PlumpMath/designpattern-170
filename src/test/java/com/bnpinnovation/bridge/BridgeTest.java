@@ -21,10 +21,10 @@ import java.io.*;
 @Slf4j
 public class BridgeTest {
 
-    @Resource( name = "DrawingApi1")
+    @Resource( name = "linuxCircular" )
     private DrawingAPI drawingAPI1;
 
-    @Resource( name = "DrawingApi2")
+    @Resource( name = "windowsCircular" )
     private DrawingAPI drawingAPI2;
 
 	@Test
